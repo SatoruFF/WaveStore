@@ -1,0 +1,19 @@
+{
+  "name": "wavestore",
+  "version": "1.0.0",
+  "description": "Fullstack REST API market with PERN stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yagamilighttt/WaveStore.git"
+  },
+  "author": "SatoruF",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yagamilighttt/WaveStore/issues"
+  },
+  "homepage": "https://github.com/Yagamilighttt/WaveStore#readme"
+}

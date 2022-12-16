@@ -1,0 +1,11 @@
+{
+    
+    "PORT": 8080,
+    "DB-name": "WaveStore",
+    "DB-user": "SatoruF",
+    "DB-password": "5352",
+    "DB-host": "localhost",
+    "DB-port": 5432,
+    "SECRET-KEY": "pear"
+
+}

@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
-import { Route, Routes} from 'react-router-dom';
+import { Navigate, Route, Routes} from 'react-router-dom';
 import { Context } from '..';
 import { authRoutes, publicRoutes, RouteModel } from '../routes';
+import { SHOP_ROUTE } from '../utils/consts';
 
-const AppRouter = () => {
+const AppRouter: any = () => {
     const {user}: any = useContext(Context)
     return (
         <Routes>
@@ -14,6 +15,7 @@ const AppRouter = () => {
             {publicRoutes.map(({path, Component}: RouteModel) => 
                 <Route key={path} path={path} element={<Component/>}/>
             )}
+            <Route path="/*" element={<Navigate replace to={SHOP_ROUTE}  />} />
       </Routes>
     );
 }

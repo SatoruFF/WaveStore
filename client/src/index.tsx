@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import UserStore from './store/UserStore';
-// import DeviceStore from './store/DeviceStore';
+import DeviceStore from './store/DeviceStore';
 
 export const Context: any = createContext(null)
 
@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <Context.Provider value={{
     user: new UserStore(),
-    // device: new DeviceStore,
+    device: new DeviceStore(),
   }}>
     <App />
   </Context.Provider>

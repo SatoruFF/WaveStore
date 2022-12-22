@@ -2,14 +2,14 @@ import { makeAutoObservable } from "mobx";
 
 export default class DeviceStore{
 
-    public _types: any[];
-    public _brands: any[];
-    public _devices: any[];
+    public _types: object[];
+    public _brands: object[];
+    public _devices: object[];
     public _selectedType: any;
     public _selectedBrand: any;
-    public _page: any;
-    public _totalCount: any;
-    public _limit: any;
+    public _page: number;
+    public _totalCount: number;
+    public _limit: number;
 
     constructor() {
         this._types = []
@@ -41,10 +41,10 @@ export default class DeviceStore{
         this.setPage(1)
         this._selectedBrand = brand
     }
-    setPage(page: any) {
+    setPage(page: number) {
         this._page = page
     }
-    setTotalCount(count: any) {
+    setTotalCount(count: number) {
         this._totalCount = count
     }
 

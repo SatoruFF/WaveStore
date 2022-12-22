@@ -4,7 +4,7 @@ import {pool} from'./models/db.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import cors from 'cors';
+import { cors } from "./middleware/cors.middleware.js";
 import router from "./routes/index.js";
 import fileUpload from "express-fileupload";
 import errorHandler from "./middleware/ErrorHandlingMiddleware.js";
@@ -16,10 +16,10 @@ const __dirname = dirname(__filename);
 const app = express()
 const PORT = config.get('PORT')
 
+app.use(cors)
 app.use(express.json())
 app.use(fileUpload({}))
 app.use(express.static(path.resolve(__dirname, 'static')))
-// app.use(cors)
 app.use('/api', router)
 
 // Error
